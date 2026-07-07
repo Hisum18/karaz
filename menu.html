@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Karaz Hookah Lounge | Hookah, Coffee, Matcha &amp; Dessert</title>
+  <meta name="description" content="The Karaz Lounge menu — premium hookah (Adalya, Starbuzz, Al Fakher), espresso &amp; specialty coffee, matcha, refreshers, caffeine-free drinks, tea, and house desserts." />
+  <meta name="theme-color" content="#0a0610" />
+  <link rel="icon" type="image/png" href="assets/img/favicon-karaz.png" />
+  <meta property="og:title" content="Menu — Karaz Hookah Lounge" />
+  <meta property="og:description" content="Premium hookah, craft coffee &amp; matcha, ice-cold refreshers, and house desserts." />
+  <meta property="og:image" content="assets/img/og-share.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Karaz Hookah Lounge — home">
+        <img class="logo-mark" src="assets/img/logo-mark.png" alt="" />
+        <span class="logo-text"><span class="logo-name">Karaz</span><span class="logo-sub">Hookah Lounge</span></span>
+      </a>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="menu.html" aria-current="page">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="visit.html">Visit</a>
+        <a class="btn btn--gold mobile-cta" href="visit.html#hours">Call Us</a>
+      </nav>
+      <div class="header-cta"><a class="btn btn--gold" href="visit.html#hours">Call Us</a></div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg"><img src="assets/img/hookah-purple.jpg" alt="" aria-hidden="true" /></div>
+      <div class="container">
+        <span class="eyebrow center">The Menu</span>
+        <h1>Smoke &amp; sips</h1>
+        <p>Premium hookah, craft coffee &amp; matcha, ice-cold refreshers, and house-made desserts. Mix, match, and make the night yours.</p>
+        <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; <span>Menu</span></div>
+      </div>
+    </section>
+
+    <!-- TABS -->
+    <div class="menu-tabs-wrap">
+      <div class="container">
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button role="tab" id="tab-hookah" aria-controls="panel-hookah" aria-selected="true" data-tab="hookah" class="active">Hookah</button>
+          <button role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="false" data-tab="coffee" tabindex="-1">Coffee</button>
+          <button role="tab" id="tab-drinks" aria-controls="panel-drinks" aria-selected="false" data-tab="drinks" tabindex="-1">Matcha &amp; Refreshers</button>
+          <button role="tab" id="tab-dessert" aria-controls="panel-dessert" aria-selected="false" data-tab="dessert" tabindex="-1">Dessert</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="section section--tight">
+      <div class="container">
+
+        <!-- ========================= HOOKAH (unchanged) ========================= -->
+        <div class="menu-panel is-active" id="panel-hookah" role="tabpanel" aria-labelledby="tab-hookah" tabindex="0">
+          <h2 class="sr-only">Hookah</h2>
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Adalya</h3><span class="line"></span><span class="price-badge">$23.99</span></div>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Love 66</b></div>
+              <div class="flavor plain"><b>Lady Killer</b></div>
+              <div class="flavor plain"><b>Berlin Nights</b></div>
+              <div class="flavor plain"><b>Skyfall</b></div>
+              <div class="flavor plain"><b>Blue Dragon</b></div>
+              <div class="flavor plain"><b>Hawaii</b></div>
+            </div>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Starbuzz</h3><span class="line"></span><span class="price-badge">$23.99</span></div>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Blue Mist</b></div>
+              <div class="flavor plain"><b>Code 69</b></div>
+              <div class="flavor plain"><b>Mighty Freeze</b></div>
+              <div class="flavor plain"><b>Melon Blue</b></div>
+              <div class="flavor plain"><b>White Peach</b></div>
+              <div class="flavor plain"><b>Safari Melon Dew</b></div>
+            </div>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Al Fakher</h3><span class="line"></span><span class="price-badge">$22.99</span></div>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Double Apple</b></div>
+              <div class="flavor plain"><b>Lemon Mint</b></div>
+              <div class="flavor plain"><b>Gum Mint</b></div>
+              <div class="flavor plain"><b>Watermelon Mint</b></div>
+              <div class="flavor plain"><b>Orange Mint</b></div>
+              <div class="flavor plain"><b>Mint</b></div>
+            </div>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Refill</h3><span class="line"></span><span class="price-badge">$9.99</span></div>
+            <p class="cat-note">Top up your bowl with any flavor, any time.</p>
+          </div>
+        </div>
+
+        <!-- ========================= COFFEE ========================= -->
+        <div class="menu-panel" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" tabindex="0">
+          <h2 class="sr-only">Coffee</h2>
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Espresso</h3><span class="line"></span></div>
+            <table class="price-table">
+              <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
+              <tbody>
+                <tr><td>Americano</td><td>$3.75</td><td>$4.50</td><td>$5.50</td></tr>
+                <tr><td>Latte</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>Cappuccino</td><td style="color:var(--muted)">—</td><td>$5.95</td><td>$6.75</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Specialty</h3><span class="line"></span></div>
+            <table class="price-table">
+              <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
+              <tbody>
+                <tr><td>Pistachio Drink</td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
+                <tr><td>Kinder Bueno</td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
+                <tr><td>Biscoff Latte</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Banana Latte</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Brown Sugar Shaken Espresso</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Mocha</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Tea</h3><span class="line"></span></div>
+            <table class="price-table">
+              <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
+              <tbody>
+                <tr><td>Adeni Tea</td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Saudi Coffee</td><td>$5.50</td><td>$6.00</td><td style="color:var(--muted)">—</td></tr>
+              </tbody>
+            </table>
+            <p class="cat-note">Saudi coffee available by the pot.</p>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Add-Ons</h3><span class="line"></span><span class="price-badge">$1.50 <small>each</small></span></div>
+            <p class="cat-note">Top any drink with your choice below. Non-dairy milk +$1.00.</p>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Kinder Bueno</b></div>
+              <div class="flavor plain"><b>Biscoff Crunch</b></div>
+              <div class="flavor plain"><b>Nutella</b></div>
+              <div class="flavor plain"><b>Chocolate Crunch</b></div>
+              <div class="flavor plain"><b>Pistachio</b></div>
+              <div class="flavor plain"><b>White Chocolate</b></div>
+              <div class="flavor plain"><b>Condensed Milk</b></div>
+              <div class="flavor plain"><b>Kunafa Pistachio</b></div>
+              <div class="flavor plain"><b>Kunafa with White Chocolate &amp; Honey</b></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================= MATCHA & REFRESHERS ========================= -->
+        <div class="menu-panel" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" tabindex="0">
+          <h2 class="sr-only">Matcha &amp; Refreshers</h2>
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Matcha</h3><span class="line"></span></div>
+            <table class="price-table">
+              <thead><tr><th>Flavor</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
+              <tbody>
+                <tr><td>Plain</td><td>$6.00</td><td>$7.00</td><td>$8.00</td></tr>
+                <tr><td>Biscoff</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
+                <tr><td>Carrot Cake</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
+                <tr><td>Strawberry</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
+                <tr><td>Mango</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
+                <tr><td>Coconut</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
+                <tr><td>Horchata</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Refreshers</h3><span class="line"></span><span class="price-badge">$5.50 – $7.00</span></div>
+            <p class="cat-note">Sm $5.50 · Md $6.50 · Lg $7.00</p>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Strawberry</b></div>
+              <div class="flavor plain"><b>Tropical Hibiscus</b></div>
+              <div class="flavor plain"><b>Mango</b></div>
+              <div class="flavor plain"><b>Pineapple</b></div>
+              <div class="flavor plain"><b>Blueberry</b></div>
+              <div class="flavor plain"><b>Lychee</b></div>
+              <div class="flavor plain"><b>Peach</b></div>
+              <div class="flavor plain"><b>Orange</b></div>
+            </div>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Caffeine-Free</h3><span class="line"></span><span class="price-badge">$5.50 – $7.00</span></div>
+            <p class="cat-note">Sm $5.50 · Md $6.50 · Lg $7.00</p>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Mango</b></div>
+              <div class="flavor plain"><b>Strawberry Banana</b></div>
+              <div class="flavor plain"><b>Watermelon Milk</b></div>
+              <div class="flavor plain"><b>Biscoff Milk</b></div>
+              <div class="flavor plain"><b>Kinder Bueno Milk</b></div>
+              <div class="flavor plain"><b>Banana Milk</b></div>
+              <div class="flavor plain"><b>Pistachio Milk</b></div>
+              <div class="flavor plain"><b>Strawberry Milk</b></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================= DESSERT ========================= -->
+        <div class="menu-panel" id="panel-dessert" role="tabpanel" aria-labelledby="tab-dessert" tabindex="0">
+          <h2 class="sr-only">Dessert</h2>
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Dessert</h3><span class="line"></span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div><span class="menu-item__name">Tiramisu</span></div><div class="menu-item__price">$4.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Tres Leches Cake</span></div><div class="menu-item__price">$6.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Honeycomb Bread</span></div><div class="menu-item__price">$5.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Sabaya</span></div><div class="menu-item__price">$5.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Soft Serve</span></div><div class="menu-item__price">$4.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Cheesecake</span></div><div class="menu-item__price">$5.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Basbousa</span></div><div class="menu-item__price">$5.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Date Cake</span></div><div class="menu-item__price">$5.00</div></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="allergy-note">Please inform us of any food allergies before ordering</p>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band reveal">
+          <span class="eyebrow center">Hungry yet?</span>
+          <h2>Come taste it for yourself</h2>
+          <p>Walk in any day, noon till midnight, and let our team guide you to your new favorite bowl.</p>
+          <div class="hero__cta"><a class="btn btn--primary btn--lg" href="visit.html">Plan Your Visit</a><a class="btn btn--ghost btn--lg" href="gallery.html">See the Space</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html" aria-label="Karaz Hookah Lounge — home">
+            <img class="logo-mark" src="assets/img/logo-mark.png" alt="" />
+            <span class="logo-text"><span class="logo-name">Karaz</span><span class="logo-sub">Hookah Lounge</span></span>
+          </a>
+          <p>A premium hookah lounge built for slow nights, good smoke, and better company.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/YOUR_HANDLE" target="_blank" rel="noopener" aria-label="Karaz on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/YOUR_PAGE" target="_blank" rel="noopener" aria-label="Karaz on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.5h2.2V5.5H14c-2 0-3.3 1.3-3.3 3.4v1.6H8.5v3h2.2V21h3.2v-7.5h2.3l.4-3h-2.7V9.2c0-.5.3-.7.9-.7Z" fill="currentColor"/></svg></a>
+            <a href="https://www.tiktok.com/@YOUR_HANDLE" target="_blank" rel="noopener" aria-label="Karaz on TikTok"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4c.4 2.3 1.8 3.7 4 4v2.7c-1.5 0-2.9-.5-4-1.3v5.6a5.3 5.3 0 1 1-5.3-5.3c.3 0 .6 0 .9.1v2.9a2.5 2.5 0 1 0 1.7 2.3V4H14Z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h3>Explore</h3><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="visit.html">Visit</a></li></ul></div>
+        <div class="footer-col"><h3>Hours</h3><ul><li>Open Daily</li><li style="color:var(--cream)">12:00 PM – 12:00 AM</li><li style="margin-top:.4rem">Noon – midnight,<br />seven days a week</li></ul></div>
+        <div class="footer-col"><h3>Find Us</h3><ul><li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=6315+Leesburg+Pike+Suite+C%2C+Falls+Church%2C+VA+22044" target="_blank" rel="noopener">6315 Leesburg Pike, Suite C<br />Falls Church, VA 22044</a></li><li style="margin-top:.4rem"><a href="tel:+17037632100">(703) 763-2100</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Karaz Hookah Lounge. All rights reserved.</span>
+        <span class="age"><b>21+</b> — Valid ID required. Please enjoy responsibly.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

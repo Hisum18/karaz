@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code local preview config (machine-specific paths)
+.claude/
+
+# Original source photos — keep large raw files out of the repo
+drive-download-*/
+*.ARW
