@@ -437,6 +437,27 @@ strong { color: var(--cream); font-weight: 600; }
 .reveal.in { opacity: 1; transform: none; }
 .reveal.d1 { transition-delay: .08s; } .reveal.d2 { transition-delay: .16s; } .reveal.d3 { transition-delay: .24s; } .reveal.d4 { transition-delay: .32s; }
 
+/* ---------- Intro entrance (on page load) ---------- */
+@keyframes introUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes introFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes introBg { from { opacity: 0; transform: scale(1.06); } to { opacity: 1; transform: scale(1); } }
+
+/* header fades in with opacity only — no transform, so it never becomes a containing
+   block that would trap the fixed, full-screen mobile nav overlay inside it */
+.site-header { animation: introFade .7s var(--ease) both; }
+.hero__bg img, .page-hero__bg img { animation: introBg 1.5s var(--ease) both; }
+.hero__inner > *, .page-hero .container > * { animation: introUp .8s var(--ease) both; }
+.hero__inner > *:nth-child(1), .page-hero .container > *:nth-child(1) { animation-delay: .10s; }
+.hero__inner > *:nth-child(2), .page-hero .container > *:nth-child(2) { animation-delay: .22s; }
+.hero__inner > *:nth-child(3), .page-hero .container > *:nth-child(3) { animation-delay: .34s; }
+.hero__inner > *:nth-child(4), .page-hero .container > *:nth-child(4) { animation-delay: .46s; }
+/* when the mobile nav overlay is open, drop the header's backdrop-filter so it can't
+   create a containing block that clips the fixed overlay (header sits behind it anyway) */
+body.no-scroll .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; }
+@media (prefers-reduced-motion: reduce) {
+  .site-header, .hero__bg img, .page-hero__bg img, .hero__inner > *, .page-hero .container > * { animation: none !important; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
