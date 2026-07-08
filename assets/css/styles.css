@@ -1,7 +1,7 @@
 /* ============================================================
    KARAZ HOOKAH LOUNGE — Design System
    A dark, luxe, late-night lounge aesthetic.
-   Palette: night plum + cherry + gold, with neon-purple glow.
+   Palette: night plum + cherry + gold.
    ============================================================ */
 
 /* ---------- Tokens ---------- */
@@ -17,7 +17,6 @@
   --cherry-200: #f4537e;
   --gold:       #cda85f;
   --gold-200:   #e6c989;
-  --purple:     #7c3aed;   /* neon accent */
 
   /* text */
   --cream:      #f5efe7;
@@ -74,8 +73,8 @@ body::before {
   content: "";
   position: fixed; inset: 0;
   background:
-    radial-gradient(1200px 800px at 80% -10%, rgba(124,58,237,.16), transparent 60%),
-    radial-gradient(1000px 700px at -10% 110%, rgba(224,40,90,.12), transparent 60%);
+    radial-gradient(1200px 800px at 80% -10%, rgba(205,168,95,.10), transparent 60%),
+    radial-gradient(1000px 700px at -10% 110%, rgba(224,40,90,.13), transparent 60%);
   pointer-events: none; z-index: 0;
 }
 
@@ -299,8 +298,8 @@ strong { color: var(--cream); font-weight: 600; }
 .menu-cat__head .line { flex: 1; height: 1px; background: var(--line-2); }
 
 .flavor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: .7rem; }
-.flavor { padding: .85rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: linear-gradient(150deg, rgba(124,58,237,.20), rgba(224,40,90,.08)); font-size: .92rem; color: var(--text); transition: border-color .3s, transform .3s, box-shadow .3s; }
-.flavor:hover { border-color: var(--gold); background: linear-gradient(150deg, rgba(124,58,237,.30), rgba(224,40,90,.14)); transform: translateY(-2px); box-shadow: 0 12px 26px -16px rgba(124,58,237,.5); }
+.flavor { padding: .85rem 1rem; border: 1px solid var(--line); border-radius: var(--radius-sm); background: linear-gradient(150deg, rgba(224,40,90,.16), rgba(205,168,95,.06)); font-size: .92rem; color: var(--text); transition: border-color .3s, transform .3s, box-shadow .3s; }
+.flavor:hover { border-color: var(--gold); background: linear-gradient(150deg, rgba(224,40,90,.24), rgba(205,168,95,.10)); transform: translateY(-2px); box-shadow: 0 12px 26px -16px rgba(224,40,90,.5); }
 .flavor b { display: block; color: var(--cream); font-family: var(--display); font-weight: 600; font-size: 1.05rem; }
 .flavor span { font-size: .76rem; color: var(--muted); }
 
