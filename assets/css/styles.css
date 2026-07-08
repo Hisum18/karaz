@@ -437,6 +437,13 @@ strong { color: var(--cream); font-weight: 600; }
 .hero__inner > *:nth-child(2), .page-hero .container > *:nth-child(2) { animation-delay: .22s; }
 .hero__inner > *:nth-child(3), .page-hero .container > *:nth-child(3) { animation-delay: .34s; }
 .hero__inner > *:nth-child(4), .page-hero .container > *:nth-child(4) { animation-delay: .46s; }
+/* inner-page banner: snappier entrance than the home hero (visitors navigate with intent) */
+.page-hero__bg img { animation: introFade .6s var(--ease) both; }
+.page-hero .container > * { animation: introUp .4s var(--ease) both; }
+.page-hero .container > *:nth-child(1) { animation-delay: .04s; }
+.page-hero .container > *:nth-child(2) { animation-delay: .10s; }
+.page-hero .container > *:nth-child(3) { animation-delay: .16s; }
+.page-hero .container > *:nth-child(4) { animation-delay: .22s; }
 /* when the mobile nav overlay is open, drop the header's backdrop-filter so it can't
    create a containing block that clips the fixed overlay (header sits behind it anyway) */
 body.no-scroll .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; }
