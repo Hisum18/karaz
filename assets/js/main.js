@@ -14,8 +14,13 @@
   /* ---------- Sticky header state ---------- */
   var header = document.querySelector(".site-header");
   if (header) {
+    var scrolled = false;
     var onScroll = function () {
-      header.classList.toggle("scrolled", window.scrollY > 24);
+      var next = window.scrollY > 24;
+      if (next !== scrolled) {
+        scrolled = next;
+        header.classList.toggle("scrolled", next);
+      }
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -25,10 +30,27 @@
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".nav");
   if (toggle && nav) {
+    // background regions to make inert while the full-screen overlay is open
+    var navBg = function () { return document.querySelectorAll("body > main, body > footer"); };
+    var navFocusables = function () {
+      var list = Array.prototype.slice.call(nav.querySelectorAll("a"));
+      list.push(toggle);
+      return list;
+    };
     var setNav = function (open) {
       toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       nav.classList.toggle("is-open", open);
       document.body.classList.toggle("no-scroll", open);
+      navBg().forEach(function (el) {
+        if (open) el.setAttribute("inert", ""); else el.removeAttribute("inert");
+      });
+      if (open) {
+        var first = nav.querySelector("a");
+        if (first) first.focus();
+      } else if (document.activeElement && nav.contains(document.activeElement)) {
+        toggle.focus();
+      }
     };
     toggle.addEventListener("click", function () {
       setNav(toggle.getAttribute("aria-expanded") !== "true");
@@ -37,7 +59,18 @@
       if (e.target.closest("a")) setNav(false);
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") setNav(false);
+      if (!nav.classList.contains("is-open")) return;
+      if (e.key === "Escape") { setNav(false); return; }
+      if (e.key === "Tab") {
+        var f = navFocusables();
+        if (!f.length) return;
+        var firstEl = f[0], lastEl = f[f.length - 1], active = document.activeElement;
+        if (e.shiftKey) {
+          if (active === firstEl || !nav.contains(active) && active !== toggle) { e.preventDefault(); lastEl.focus(); }
+        } else {
+          if (active === lastEl) { e.preventDefault(); firstEl.focus(); }
+        }
+      }
     });
   }
 

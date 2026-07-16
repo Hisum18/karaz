@@ -1,0 +1,5 @@
+# Karaz Hookah Lounge — robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://karazlounge.com/sitemap.xml
