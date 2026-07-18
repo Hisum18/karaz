@@ -1,0 +1,33 @@
+# Karaz Hookah Lounge — Netlify configuration
+# Static site (no build step): this file only sets response headers.
+# Note: publish directory is intentionally left to Netlify's existing setting.
+
+# ---------- Security headers (every response) ----------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Clickjacking: the site is never meant to be framed.
+    X-Frame-Options = "DENY"
+    # Stop MIME-type sniffing.
+    X-Content-Type-Options = "nosniff"
+    # Don't leak full URLs to third parties on outbound clicks.
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Turn off browser features the site doesn't use.
+    Permissions-Policy = "geolocation=(), camera=(), microphone=()"
+    # Content-Security-Policy: 'unsafe-inline' is used deliberately — the site has
+    # inline JSON-LD, inline style attributes, and a tiny inline no-JS bootstrap
+    # script, and has zero user-supplied/reflected input (no XSS sink). The other
+    # directives (frame-ancestors, object-src, base-uri, form-action) still harden it.
+    # Allowed third parties: Google Fonts (styles + font files) and the Google Maps embed.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'"
+
+# ---------- Asset caching ----------
+# By default Netlify serves every asset with max-age=0,must-revalidate, so repeat
+# visitors revalidate CSS/JS/images on every page. Filenames aren't content-hashed,
+# so use a 1-day fresh window plus stale-while-revalidate (serve instantly, refresh
+# in the background) instead of a year-long immutable cache that could go stale
+# after a deploy.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"

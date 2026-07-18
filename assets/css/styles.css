@@ -132,7 +132,6 @@ strong { color: var(--cream); font-weight: 600; }
   font-size: .82rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
   border-radius: 8px;
   transition: transform .35s var(--ease), background .35s var(--ease), color .3s, box-shadow .4s;
-  will-change: transform;
 }
 .btn:hover { transform: translateY(-2px); }
 .btn--primary { background: var(--cherry); color: #fff; box-shadow: 0 10px 30px -14px rgba(224,40,90,.32); }
@@ -311,14 +310,17 @@ strong { color: var(--cream); font-weight: 600; }
 .flavor span { font-size: .76rem; color: var(--muted); }
 
 /* ---------- Menu tabs & price tables ---------- */
-.menu-tabs-wrap { position: sticky; top: var(--header-h); z-index: 30; background: rgba(10,6,16,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); padding-block: .85rem; }
+.menu-tabs-wrap { position: sticky; top: var(--header-h); z-index: 30; background: rgba(10,6,16,.94); border-bottom: 1px solid var(--line); padding-block: .85rem; }
 .menu-tabs { display: flex; flex-wrap: wrap; gap: .55rem; justify-content: center; }
 .menu-tabs button { padding: .6rem 1.35rem; border-radius: 8px; border: 1px solid var(--line); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--muted); transition: color .3s, background .3s, border-color .3s; white-space: nowrap; }
 .menu-tabs button:hover { color: var(--cream); border-color: var(--line-2); }
 .menu-tabs button.active { background: var(--cherry); border-color: var(--cherry); color: #fff; }
 
-.menu-panel { display: none; }
-.menu-panel.is-active { display: block; animation: panelfade .5s var(--ease); }
+/* Tabs are a JS enhancement: with .js only the active panel shows; without JS
+   every panel is visible (below) and the dead tab bar is hidden. */
+html.js .menu-panel { display: none; }
+html.js .menu-panel.is-active { display: block; animation: panelfade .5s var(--ease); }
+html.no-js .menu-tabs-wrap { display: none; }
 @keyframes panelfade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .menu-panel .menu-cat { margin-bottom: 2rem; }
 .menu-panel .menu-cat:last-child { margin-bottom: 0; }
@@ -426,8 +428,10 @@ strong { color: var(--cream); font-weight: 600; }
 .footer-bottom .age b { color: var(--cherry-200); }
 
 /* ---------- Reveal animation ---------- */
-.reveal { opacity: 0; transform: translateY(12px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
-.reveal.in { opacity: 1; transform: none; }
+/* Scoped to html.js so that without JS the content is visible by default (no
+   fallback trap). .reveal.in is also scoped so it out-specifies html.js .reveal. */
+html.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
+html.js .reveal.in { opacity: 1; transform: none; }
 .reveal.d1 { transition-delay: .05s; } .reveal.d2 { transition-delay: .1s; } .reveal.d3 { transition-delay: .15s; } .reveal.d4 { transition-delay: .2s; }
 
 /* ---------- Intro entrance (on page load) ---------- */
@@ -468,7 +472,9 @@ body.no-scroll .site-header { -webkit-backdrop-filter: none; backdrop-filter: no
 }
 @media (max-width: 860px) {
   .nav, .header-cta .btn { display: none; }
-  .nav-toggle { display: block; }
+  /* Only show the hamburger when JS can open the overlay; without JS it would be a
+     dead control, so it stays hidden and the footer "Explore" links are the fallback. */
+  html.js .nav-toggle { display: block; }
   /* mobile overlay nav */
   .nav.is-open {
     display: flex; flex-direction: column; justify-content: center; gap: 1.6rem;

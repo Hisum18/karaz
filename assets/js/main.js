@@ -197,7 +197,15 @@
   }
 
   /* ---------- Highlight today's hours ---------- */
-  var today = new Date().getDay(); // 0 = Sun ... 6 = Sat
+  // Use the venue's timezone (US Eastern), not the visitor's, so someone west of
+  // Eastern near midnight doesn't see the wrong day highlighted.
+  var today;
+  try {
+    var etDay = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short" }).format(new Date());
+    today = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[etDay];
+  } catch (e) {
+    today = new Date().getDay(); // fallback: visitor-local weekday (0 = Sun ... 6 = Sat)
+  }
   var todayRow = document.querySelector('.hours-table tr[data-day="' + today + '"]');
   if (todayRow) todayRow.classList.add("today");
 
