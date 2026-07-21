@@ -1,16 +1,23 @@
-# Karaz Hookah Lounge — Website
+# Karaz Lounge — Website
 
-A multi‑page, static website for **Karaz Hookah Lounge**. No build step, no
-dependencies — just open it or drop it on any web host.
+A multi‑page, static website for **Karaz Lounge** — a hookah lounge in Falls
+Church, VA. No build step, no dependencies — just open it or drop it on any web
+host. Live at **karazlounge.com** (hosted on Netlify, auto‑deploys from `main`).
+
+> "Hookah Lounge" is used only as a *descriptor* in page titles and headings —
+> never as the business name. The name is **Karaz Lounge** everywhere (logo,
+> footer, `og:site_name`, schema), matching the Google/Apple/Yelp listings.
+> Keeping it consistent is a direct local‑SEO signal.
 
 ## Pages
 | File | Purpose |
 |------|---------|
 | `index.html` | Home — hero, welcome, the experience, menu teaser, gallery strip, Google reviews |
-| `menu.html` | Real menu — hookah, sweets, coffee, matcha & refreshers (tabbed) |
+| `menu.html` | Menu — hookah, sweets, coffee, matcha & refreshers (tabbed) |
 | `gallery.html` | Filterable photo gallery with a lightbox |
 | `about.html` | The story behind Karaz |
 | `visit.html` | Hours, location, live map, and directions |
+| `404.html` | Custom not‑found page |
 
 ## Run it locally
 Just open `index.html` in a browser. For nicer behavior (so paths resolve
@@ -22,38 +29,42 @@ python3 -m http.server 8000
 ```
 
 ## Real info that's already wired in
-Pulled from the venue's Google Business listing (June 2026):
+Matched to the venue's Google Business listing (verified July 2026):
 
 - **Address:** 6315 Leesburg Pike, Suite C, Falls Church, VA 22044
 - **Phone:** (703) 763-2100 (`tel:+17037632100`)
-- **Hours:** every day, 12:00 PM – 12:00 AM
-- **Map & directions** on `visit.html` point at the real address.
+- **Hours** (mirror Google exactly — visible table, footer, *and* JSON‑LD schema):
+  - Sun–Wed: 12:00 PM – 12:00 AM
+  - Thu: 12:00 PM – 1:00 AM
+  - Fri–Sat: 12:00 PM – 2:00 AM
+- **Map & directions** on `visit.html` use the official Google "Embed a map"
+  iframe (`…/maps/embed?pb=…`) — a pin on the storefront; the stylesheet tints it
+  to match the dark theme.
+- **Instagram:** live in the footer → <https://www.instagram.com/karaz.lounge>
+  (also in the JSON‑LD `sameAs`). Facebook & TikTok are left **commented out** in
+  the footer until those accounts exist — uncomment the block and drop in the
+  handle to enable.
 - **Reviews** on the home page are three real 5★ Google reviews; the "Read all
   reviews" button links to the Google listing.
-- **Menu** (`menu.html`) holds the real menu with live prices — Hookah (Adalya,
-  Starbuzz, Al Fakher), Sweets, Coffee, and Matcha & Refreshers — in a tabbed
-  layout. Transcribed from karazlounge.com; update items/prices there as they change.
+- **Menu** (`menu.html`) is in a tabbed layout. Hookah prices are confirmed;
+  other items/prices are kept in sync manually — re‑check against the live menu.
 
-## Still placeholder / to confirm
-| Item | Note |
-|------|------|
-| `href="#"` on the Instagram/Facebook/TikTok links (footer) | Add the real social URLs |
-| `21+` (footer) | Set to the venue's actual minimum age if different |
-| Google reviews on the home page | Refresh the three featured quotes as new reviews come in |
-| Menu prices | Kept in sync manually — re-check against the live menu periodically |
+## SEO & structured data
+- **JSON‑LD** (`schema.org`) on every page: a `LocalBusiness`
+  (CafeOrCoffeeShop + BarOrPub) with hours/geo/amenities on the home page, plus
+  `WebPage`, `BreadcrumbList`, and a `Menu` graph where relevant.
+- **`sitemap.xml`** and **`robots.txt`** at the root.
+- **Canonical**, Open Graph, and Twitter‑card tags on each page point at
+  `https://karazlounge.com/…`.
 
-The map on `visit.html` is a keyless Google Maps embed (`…/maps?q=ADDRESS&output=embed`)
-centered on the address; the stylesheet tints it to match the dark theme. To swap
-in a richer "Share → Embed a map" iframe later, just replace the `<iframe>` inside
-`.map-embed`.
-
-> **Note:** reservations were intentionally removed — Karaz is walk-in only, so the
-> site drives people to **Call**, **Get Directions**, and **Hours & Location** instead.
+> **Confirm with the owner:** the amenity flags in the home‑page schema (outdoor
+> seating, pool table, smoking) and the menu items/prices are published as
+> structured data — keep them accurate to what the venue actually offers.
 
 ## Photos
-- Curated from the original Sony RAW (`.ARW`) shoot — 24 of the best, hand‑picked.
-- `assets/img/` holds the full‑size web images (max 1800px, hero at 2600px).
-- `assets/img/thumb/` holds the gallery/grid thumbnails (max 760px).
+- `assets/img/` holds the full‑size web images; key hero/banner images also have
+  optimized **`.webp`** versions (preloaded on the pages that use them).
+- `assets/img/thumb/` holds the gallery/grid thumbnails.
 
 To add or swap photos: drop a large version in `assets/img/`, a matching
 thumbnail in `assets/img/thumb/` (same filename), and reference it in the
@@ -62,11 +73,16 @@ relevant page. On `gallery.html`, copy a `.g-item` block and set its
 
 ## Brand notes
 - **Name:** *Karaz* (كرز) is Arabic for **cherry** — hence the cherry logo.
-- **Palette:** night plum `#0a0610`, cherry `#e0285a`, gold `#cda85f`, with a
-  neon‑purple glow. All defined as CSS variables at the top of
-  `assets/css/styles.css` — change them in one place to re‑theme the whole site.
+- **Palette:** night plum `#0a0610`, cherry `#e0285a`, gold `#cda85f`. Defined as
+  CSS variables at the top of `assets/css/styles.css` — change them in one place
+  to re‑theme the whole site.
 - **Type:** Cormorant Garamond (display) + Inter (body), loaded from Google Fonts.
 
 ## Tech
 Plain HTML, one CSS file, one JS file. Responsive, keyboard‑accessible, respects
-`prefers-reduced-motion`. Works offline once the fonts are cached.
+`prefers-reduced-motion`, with a skip‑link and no‑JS fallbacks. Works offline
+once the fonts are cached.
+
+> **Note:** reservations were intentionally removed — Karaz is walk‑in only, so
+> the site drives people to **Call**, **Get Directions**, and **Hours & Location**
+> instead.
