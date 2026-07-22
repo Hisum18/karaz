@@ -27,53 +27,486 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://karazlounge.com/menu.html#webpage",
-        "url": "https://karazlounge.com/menu.html",
-        "name": "Hookah & Coffee Menu | Karaz Lounge, Falls Church",
-        "inLanguage": "en",
-        "isPartOf": {"@id": "https://karazlounge.com/#website"},
-        "about": {"@id": "https://karazlounge.com/#business"},
-        "primaryImageOfPage": "https://karazlounge.com/assets/img/og-share.jpg",
-        "breadcrumb": {"@id": "https://karazlounge.com/menu.html#breadcrumb"}
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://karazlounge.com/menu.html#webpage",
+      "url": "https://karazlounge.com/menu.html",
+      "name": "Hookah & Coffee Menu | Karaz Lounge, Falls Church",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://karazlounge.com/#website"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://karazlounge.com/menu.html#breadcrumb",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://karazlounge.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Menu", "item": "https://karazlounge.com/menu.html"}
-        ]
+      "about": {
+        "@id": "https://karazlounge.com/#business"
       },
-      {
-        "@type": "Menu",
-        "@id": "https://karazlounge.com/menu.html#menu",
-        "url": "https://karazlounge.com/menu.html",
-        "name": "Karaz Lounge Menu",
-        "inLanguage": "en",
-        "hasMenuSection": [
-          {"@type": "MenuSection", "name": "Hookah", "hasMenuItem": [
-            {"@type": "MenuItem", "name": "Adalya", "offers": {"@type": "Offer", "price": "23.99", "priceCurrency": "USD"}},
-            {"@type": "MenuItem", "name": "Starbuzz", "offers": {"@type": "Offer", "price": "23.99", "priceCurrency": "USD"}},
-            {"@type": "MenuItem", "name": "Al Fakher", "offers": {"@type": "Offer", "price": "22.99", "priceCurrency": "USD"}},
-            {"@type": "MenuItem", "name": "Refill", "offers": {"@type": "Offer", "price": "9.99", "priceCurrency": "USD"}}
-          ]},
-          {"@type": "MenuSection", "name": "Coffee", "hasMenuItem": [
-            {"@type": "MenuItem", "name": "Americano", "offers": {"@type": "Offer", "price": "3.75", "priceCurrency": "USD"}},
-            {"@type": "MenuItem", "name": "Latte", "offers": {"@type": "Offer", "price": "4.85", "priceCurrency": "USD"}},
-            {"@type": "MenuItem", "name": "Cappuccino", "offers": {"@type": "Offer", "price": "5.95", "priceCurrency": "USD"}}
-          ]},
-          {"@type": "MenuSection", "name": "Specialty", "hasMenuItem": [
-            {"@type": "MenuItem", "name": "Pistachio Drink", "offers": {"@type": "Offer", "price": "6.50", "priceCurrency": "USD"}},
-            {"@type": "MenuItem", "name": "Biscoff Latte", "offers": {"@type": "Offer", "price": "5.60", "priceCurrency": "USD"}}
-          ]}
-        ]
+      "primaryImageOfPage": "https://karazlounge.com/assets/img/og-share.jpg",
+      "breadcrumb": {
+        "@id": "https://karazlounge.com/menu.html#breadcrumb"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://karazlounge.com/menu.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://karazlounge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Menu",
+          "item": "https://karazlounge.com/menu.html"
+        }
+      ]
+    },
+    {
+      "@type": "Menu",
+      "@id": "https://karazlounge.com/menu.html#menu",
+      "url": "https://karazlounge.com/menu.html",
+      "name": "Karaz Lounge Menu",
+      "inLanguage": "en",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Hookah",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Adalya",
+              "offers": {
+                "@type": "Offer",
+                "price": "23.99",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Starbuzz",
+              "offers": {
+                "@type": "Offer",
+                "price": "23.99",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Al Fakher",
+              "offers": {
+                "@type": "Offer",
+                "price": "22.99",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Refill",
+              "offers": {
+                "@type": "Offer",
+                "price": "9.99",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Coffee",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Drip",
+              "offers": {
+                "@type": "Offer",
+                "price": "3.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Turkish",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Mufawaar",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Saudi",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.50",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Qishr",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.00",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Espresso",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Americano",
+              "offers": {
+                "@type": "Offer",
+                "price": "3.75",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "4.85",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Cappuccino",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.95",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Mocha",
+              "offers": {
+                "@type": "Offer",
+                "price": "4.85",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "White Mocha",
+              "offers": {
+                "@type": "Offer",
+                "price": "4.85",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Caramel",
+              "offers": {
+                "@type": "Offer",
+                "price": "4.85",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Specialty",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Pistachio Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.50",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Kinder Bueno",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.50",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Biscoff Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Banana Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Brown Sugar Shaken Espresso",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Horchata Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Spanish Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Coconut Latte",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Marshmallow Adeni Chai",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Baladi",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.60",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Tea",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Adeni",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.50",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Spiced Black Tea",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.50",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Moroccan",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.50",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Classic Tea",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.99",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Matcha",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Matcha",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.50",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Refreshers",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Refreshers",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.50",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Caffeine-Free",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Caffeine-Free",
+              "offers": {
+                "@type": "Offer",
+                "price": "5.50",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Sweets",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Tiramisu",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Tres Leches Cake",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Honeycomb Bread",
+              "offers": {
+                "@type": "Offer",
+                "price": "7.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Soft-Serve",
+              "offers": {
+                "@type": "Offer",
+                "price": "6.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Cheesecake",
+              "offers": {
+                "@type": "Offer",
+                "price": "8.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Mini Cheesecake",
+              "offers": {
+                "@type": "Offer",
+                "price": "4.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Date Cake",
+              "offers": {
+                "@type": "Offer",
+                "price": "4.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Crepe",
+              "offers": {
+                "@type": "Offer",
+                "price": "15.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Waffle Stixs",
+              "offers": {
+                "@type": "Offer",
+                "price": "15.00",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Mini Pancakes",
+              "offers": {
+                "@type": "Offer",
+                "price": "10.00",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -116,7 +549,7 @@
           <button role="tab" id="tab-hookah" aria-controls="panel-hookah" aria-selected="true" data-tab="hookah" class="active">Hookah</button>
           <button role="tab" id="tab-coffee" aria-controls="panel-coffee" aria-selected="false" data-tab="coffee" tabindex="-1">Coffee</button>
           <button role="tab" id="tab-drinks" aria-controls="panel-drinks" aria-selected="false" data-tab="drinks" tabindex="-1">Matcha &amp; Refreshers</button>
-          <button role="tab" id="tab-dessert" aria-controls="panel-dessert" aria-selected="false" data-tab="dessert" tabindex="-1">Dessert</button>
+          <button role="tab" id="tab-dessert" aria-controls="panel-dessert" aria-selected="false" data-tab="dessert" tabindex="-1">Sweets</button>
         </div>
       </div>
     </div>
@@ -172,6 +605,22 @@
         <!-- ========================= COFFEE ========================= -->
         <div class="menu-panel" id="panel-coffee" role="tabpanel" aria-labelledby="tab-coffee" tabindex="0">
           <h2 class="sr-only">Coffee</h2>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Coffee</h3><span class="line"></span></div>
+            <table class="price-table">
+              <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
+              <tbody>
+                <tr><td>Drip</td><td>$3.00</td><td>$3.50</td><td>$4.00</td></tr>
+                <tr><td>Turkish</td><td style="color:var(--muted)">—</td><td>$6.00</td><td style="color:var(--muted)">—</td></tr>
+                <tr><td>Mufawaar</td><td style="color:var(--muted)">—</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Saudi</td><td style="color:var(--muted)">—</td><td>$5.50</td><td>$6.00</td></tr>
+                <tr><td>Qishr</td><td style="color:var(--muted)">—</td><td>$6.00</td><td>$6.50</td></tr>
+              </tbody>
+            </table>
+            <p class="cat-note">Coffee &amp; tea available by the pot — please allow 5–10 minutes for a fresh batch.</p>
+          </div>
+
           <div class="menu-cat">
             <div class="menu-cat__head"><h3>Espresso</h3><span class="line"></span></div>
             <table class="price-table">
@@ -180,6 +629,9 @@
                 <tr><td>Americano</td><td>$3.75</td><td>$4.50</td><td>$5.50</td></tr>
                 <tr><td>Latte</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
                 <tr><td>Cappuccino</td><td style="color:var(--muted)">—</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>Mocha</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>White Mocha</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>Caramel</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
               </tbody>
             </table>
           </div>
@@ -189,12 +641,16 @@
             <table class="price-table">
               <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
               <tbody>
-                <tr><td>Pistachio Drink</td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
+                <tr><td>Pistachio Latte</td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
                 <tr><td>Kinder Bueno</td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
-                <tr><td>Biscoff Latte</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Biscoff Latte<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
                 <tr><td>Banana Latte</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Brown Sugar Shaken Espresso</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Mocha</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Brown Sugar Shaken Espresso<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Horchata Latte<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Spanish Latte</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Coconut Latte<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Marshmallow Adeni Chai</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Baladi</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
               </tbody>
             </table>
           </div>
@@ -204,26 +660,21 @@
             <table class="price-table">
               <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
               <tbody>
-                <tr><td>Adeni Tea</td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
-                <tr><td>Saudi Coffee</td><td>$5.50</td><td>$6.00</td><td style="color:var(--muted)">—</td></tr>
+                <tr><td>Adeni</td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Spiced Black Tea</td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Moroccan</td><td style="color:var(--muted)">—</td><td>$5.50</td><td>$6.00</td></tr>
+                <tr><td>Classic Tea</td><td style="color:var(--muted)">—</td><td>$1.99</td><td>$2.99</td></tr>
               </tbody>
             </table>
-            <p class="cat-note">Saudi coffee available by the pot.</p>
           </div>
 
           <div class="menu-cat">
-            <div class="menu-cat__head"><h3>Add-Ons</h3><span class="line"></span><span class="price-badge">$1.50 <small>each</small></span></div>
-            <p class="cat-note">Top any drink with your choice below. Non-dairy milk +$1.00.</p>
-            <div class="flavor-grid">
-              <div class="flavor plain"><b>Kinder Bueno</b></div>
-              <div class="flavor plain"><b>Biscoff Crunch</b></div>
-              <div class="flavor plain"><b>Nutella</b></div>
-              <div class="flavor plain"><b>Chocolate Crunch</b></div>
-              <div class="flavor plain"><b>Pistachio</b></div>
-              <div class="flavor plain"><b>White Chocolate</b></div>
-              <div class="flavor plain"><b>Condensed Milk</b></div>
-              <div class="flavor plain"><b>Kunafa Pistachio</b></div>
-              <div class="flavor plain"><b>Kunafa with White Chocolate &amp; Honey</b></div>
+            <div class="menu-cat__head"><h3>Add-Ons</h3><span class="line"></span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div><span class="menu-item__name">Non-Dairy Milk</span></div><div class="menu-item__price">+$1.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Cold Foam</span></div><div class="menu-item__price">+$0.50</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Flavored Cold Foam</span></div><div class="menu-item__price">+$0.85</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Additional Flavors</span></div><div class="menu-item__price">+$0.50</div></div>
             </div>
           </div>
         </div>
@@ -231,34 +682,34 @@
         <!-- ========================= MATCHA & REFRESHERS ========================= -->
         <div class="menu-panel" id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" tabindex="0">
           <h2 class="sr-only">Matcha &amp; Refreshers</h2>
+
           <div class="menu-cat">
-            <div class="menu-cat__head"><h3>Matcha</h3><span class="line"></span></div>
-            <table class="price-table">
-              <thead><tr><th>Flavor</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
-              <tbody>
-                <tr><td>Plain</td><td>$6.00</td><td>$7.00</td><td>$8.00</td></tr>
-                <tr><td>Biscoff</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
-                <tr><td>Carrot Cake</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
-                <tr><td>Strawberry</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
-                <tr><td>Mango</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
-                <tr><td>Coconut</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
-                <tr><td>Horchata</td><td>$6.50</td><td>$7.50</td><td>$8.50</td></tr>
-              </tbody>
-            </table>
+            <div class="menu-cat__head"><h3>Matcha</h3><span class="line"></span><span class="price-badge">$6.50 – $8.50</span></div>
+            <p class="cat-note">Sm $6.50 · Md $7.50 · Lg $8.50</p>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Banana</b></div>
+              <div class="flavor plain"><b>Horchata</b></div>
+              <div class="flavor plain"><b>Strawberry</b></div>
+              <div class="flavor plain"><b>Mango</b></div>
+              <div class="flavor plain"><b>Coconut</b></div>
+              <div class="flavor plain"><b>Carrot Cake</b></div>
+            </div>
           </div>
 
           <div class="menu-cat">
             <div class="menu-cat__head"><h3>Refreshers</h3><span class="line"></span><span class="price-badge">$5.50 – $7.00</span></div>
-            <p class="cat-note">Sm $5.50 · Md $6.50 · Lg $7.00</p>
+            <p class="cat-note">Sm $5.50 · Md $6.50 · Lg $7.00 · Add energy +$1.00 (160 mg caffeine)</p>
             <div class="flavor-grid">
               <div class="flavor plain"><b>Strawberry</b></div>
               <div class="flavor plain"><b>Tropical Hibiscus</b></div>
               <div class="flavor plain"><b>Mango</b></div>
+              <div class="flavor plain"><b>Lychee</b></div>
               <div class="flavor plain"><b>Pineapple</b></div>
               <div class="flavor plain"><b>Blueberry</b></div>
-              <div class="flavor plain"><b>Lychee</b></div>
               <div class="flavor plain"><b>Peach</b></div>
               <div class="flavor plain"><b>Orange</b></div>
+              <div class="flavor plain"><b>Passion Fruit</b></div>
+              <div class="flavor plain"><b>White Grape</b></div>
             </div>
           </div>
 
@@ -269,34 +720,34 @@
               <div class="flavor plain"><b>Mango</b></div>
               <div class="flavor plain"><b>Strawberry Banana</b></div>
               <div class="flavor plain"><b>Watermelon Milk</b></div>
-              <div class="flavor plain"><b>Biscoff Milk</b></div>
-              <div class="flavor plain"><b>Kinder Bueno Milk</b></div>
+              <div class="flavor plain"><b>Papaya Milk</b></div>
               <div class="flavor plain"><b>Banana Milk</b></div>
-              <div class="flavor plain"><b>Pistachio Milk</b></div>
               <div class="flavor plain"><b>Strawberry Milk</b></div>
             </div>
           </div>
         </div>
 
-        <!-- ========================= DESSERT ========================= -->
+        <!-- ========================= SWEETS ========================= -->
         <div class="menu-panel" id="panel-dessert" role="tabpanel" aria-labelledby="tab-dessert" tabindex="0">
-          <h2 class="sr-only">Dessert</h2>
+          <h2 class="sr-only">Sweets</h2>
           <div class="menu-cat">
-            <div class="menu-cat__head"><h3>Dessert</h3><span class="line"></span></div>
+            <div class="menu-cat__head"><h3>Sweets</h3><span class="line"></span></div>
             <div class="menu-list">
-              <div class="menu-item"><div><span class="menu-item__name">Tiramisu</span></div><div class="menu-item__price">$4.00</div></div>
-              <div class="menu-item"><div><span class="menu-item__name">Tres Leches Cake</span></div><div class="menu-item__price">$6.00</div></div>
-              <div class="menu-item"><div><span class="menu-item__name">Honeycomb Bread</span></div><div class="menu-item__price">$5.00</div></div>
-              <div class="menu-item"><div><span class="menu-item__name">Sabaya</span></div><div class="menu-item__price">$5.00</div></div>
-              <div class="menu-item"><div><span class="menu-item__name">Soft Serve</span></div><div class="menu-item__price">$4.00</div></div>
-              <div class="menu-item"><div><span class="menu-item__name">Cheesecake</span></div><div class="menu-item__price">$5.00</div></div>
-              <div class="menu-item"><div><span class="menu-item__name">Basbousa</span></div><div class="menu-item__price">$5.00</div></div>
-              <div class="menu-item"><div><span class="menu-item__name">Date Cake</span></div><div class="menu-item__price">$5.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Tiramisu</span></div><div class="menu-item__price">$6.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Tres Leches Cake</span></div><div class="menu-item__price">$8.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Honeycomb Bread</span></div><div class="menu-item__price">$7.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Soft-Serve</span></div><div class="menu-item__price">$6.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Cheesecake</span></div><div class="menu-item__price">$8.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Mini Cheesecake</span></div><div class="menu-item__price">$4.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Date Cake</span></div><div class="menu-item__price">$4.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Crepe</span></div><div class="menu-item__price">$15.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Waffle Stixs</span></div><div class="menu-item__price">$15.00</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Mini Pancakes</span><div class="menu-item__desc">12 pieces · 24 pieces</div></div><div class="menu-item__price">$10.00 / $15.00</div></div>
             </div>
           </div>
         </div>
 
-        <p class="allergy-note">Please inform us of any food allergies before ordering</p>
+        <p class="allergy-note">Hot drinks available in Md &amp; Lg only · Please notify us of any allergies before ordering</p>
       </div>
     </section>
 
