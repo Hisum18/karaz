@@ -364,6 +364,30 @@
         },
         {
           "@type": "MenuSection",
+          "name": "Tea by the Pot",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Small Pot",
+              "offers": {
+                "@type": "Offer",
+                "price": "12.99",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Large Pot",
+              "offers": {
+                "@type": "Offer",
+                "price": "17.99",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
           "name": "Matcha",
           "hasMenuItem": [
             {
@@ -462,6 +486,99 @@
               "offers": {
                 "@type": "Offer",
                 "price": "7.99",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Soda Cans",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Coca-Cola",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.89",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Coke Zero",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.89",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Diet Coke",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.89",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Pepsi",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.89",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Sprite",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.89",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Canada Dry",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.89",
+                "priceCurrency": "USD"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bottles & Energy",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Red Bull",
+              "offers": {
+                "@type": "Offer",
+                "price": "3.99",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Sparkling Water",
+              "offers": {
+                "@type": "Offer",
+                "price": "3.79",
+                "priceCurrency": "USD"
+              }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Bottled Water",
+              "offers": {
+                "@type": "Offer",
+                "price": "1.99",
                 "priceCurrency": "USD"
               }
             }
@@ -671,11 +788,11 @@
             <table class="price-table">
               <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
               <tbody>
-                <tr><td>Drip</td><td>$3.00</td><td>$3.50</td><td>$4.00</td></tr>
-                <tr><td>Turkish</td><td style="color:var(--muted)">—</td><td>$6.00</td><td style="color:var(--muted)">—</td></tr>
-                <tr><td>Mufawaar</td><td style="color:var(--muted)">—</td><td>$6.00</td><td>$6.50</td></tr>
-                <tr><td>Saudi</td><td style="color:var(--muted)">—</td><td>$5.50</td><td>$6.00</td></tr>
-                <tr><td>Qishr</td><td style="color:var(--muted)">—</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Drip<span class="menu-item__tag">Hot or Iced</span></td><td>$3.00</td><td>$3.50</td><td>$4.00</td></tr>
+                <tr><td>Turkish<span class="menu-item__tag">Hot Only</span></td><td style="color:var(--muted)">—</td><td>$6.00</td><td style="color:var(--muted)">—</td></tr>
+                <tr><td>Mufawaar<span class="menu-item__tag">Hot Only</span></td><td style="color:var(--muted)">—</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Saudi<span class="menu-item__tag">Hot Only</span></td><td style="color:var(--muted)">—</td><td>$5.50</td><td>$6.00</td></tr>
+                <tr><td>Qishr<span class="menu-item__tag">Hot Only</span></td><td style="color:var(--muted)">—</td><td>$6.00</td><td>$6.50</td></tr>
               </tbody>
             </table>
             <p class="cat-note">Coffee &amp; tea available by the pot — please allow 5–10 minutes for a fresh batch.</p>
@@ -686,12 +803,12 @@
             <table class="price-table">
               <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
               <tbody>
-                <tr><td>Americano</td><td>$3.75</td><td>$4.50</td><td>$5.50</td></tr>
-                <tr><td>Latte</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
-                <tr><td>Cappuccino</td><td style="color:var(--muted)">—</td><td>$5.95</td><td>$6.75</td></tr>
-                <tr><td>Mocha</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
-                <tr><td>White Mocha</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
-                <tr><td>Caramel</td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>Americano<span class="menu-item__tag">Hot or Iced</span></td><td>$3.75</td><td>$4.50</td><td>$5.50</td></tr>
+                <tr><td>Latte<span class="menu-item__tag">Hot or Iced</span></td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>Cappuccino<span class="menu-item__tag">Hot Only</span></td><td style="color:var(--muted)">—</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>Mocha<span class="menu-item__tag">Hot or Iced</span></td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>White Mocha<span class="menu-item__tag">Hot or Iced</span></td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
+                <tr><td>Caramel<span class="menu-item__tag">Hot or Iced</span></td><td>$4.85</td><td>$5.95</td><td>$6.75</td></tr>
               </tbody>
             </table>
           </div>
@@ -701,16 +818,16 @@
             <table class="price-table">
               <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
               <tbody>
-                <tr><td>Pistachio Latte</td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
-                <tr><td>Kinder Bueno</td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
-                <tr><td>Biscoff Latte<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Banana Latte</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Brown Sugar Shaken Espresso<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Horchata Latte<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Spanish Latte</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Coconut Latte<span class="menu-item__tag">Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Marshmallow Adeni Chai</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
-                <tr><td>Baladi</td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Pistachio Latte<span class="menu-item__tag">Hot or Iced</span></td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
+                <tr><td>Kinder Bueno<span class="menu-item__tag">Hot or Iced</span></td><td>$6.50</td><td>$7.75</td><td>$8.30</td></tr>
+                <tr><td>Biscoff Latte<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Banana Latte<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Brown Sugar Shaken Espresso<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Horchata Latte<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Spanish Latte<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Coconut Latte<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Marshmallow Adeni Chai<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
+                <tr><td>Baladi<span class="menu-item__tag">Hot or Iced</span></td><td>$5.60</td><td>$6.75</td><td>$7.50</td></tr>
               </tbody>
             </table>
           </div>
@@ -720,12 +837,21 @@
             <table class="price-table">
               <thead><tr><th>Drink</th><th class="sz">Sm</th><th class="sz">Md</th><th class="sz">Lg</th></tr></thead>
               <tbody>
-                <tr><td>Adeni</td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
-                <tr><td>Spiced Black Tea</td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
-                <tr><td>Moroccan</td><td style="color:var(--muted)">—</td><td>$5.50</td><td>$6.00</td></tr>
-                <tr><td>Classic Tea</td><td style="color:var(--muted)">—</td><td>$1.99</td><td>$2.99</td></tr>
+                <tr><td>Adeni<span class="menu-item__tag">Hot or Iced</span></td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Spiced Black Tea<span class="menu-item__tag">Hot or Iced</span></td><td>$5.50</td><td>$6.00</td><td>$6.50</td></tr>
+                <tr><td>Moroccan<span class="menu-item__tag">Hot Only</span></td><td style="color:var(--muted)">—</td><td>$5.50</td><td>$6.00</td></tr>
+                <tr><td>Classic Tea<span class="menu-item__tag">Hot Only</span></td><td style="color:var(--muted)">—</td><td>$1.99</td><td>$2.99</td></tr>
               </tbody>
             </table>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Tea by the Pot</h3><span class="line"></span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div><span class="menu-item__name">Small Pot</span><div class="menu-item__desc">Serves about 4</div></div><div class="menu-item__price">$12.99</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Large Pot</span><div class="menu-item__desc">6–9 cups</div></div><div class="menu-item__price">$17.99</div></div>
+            </div>
+            <p class="cat-note">Please allow 5–10 minutes for a fresh batch.</p>
           </div>
 
           <div class="menu-cat">
@@ -797,6 +923,27 @@
               <div class="flavor plain"><b>Lemon Mint</b></div>
             </div>
           </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Soda Cans</h3><span class="line"></span><span class="price-badge">$1.89</span></div>
+            <div class="flavor-grid">
+              <div class="flavor plain"><b>Coca-Cola</b></div>
+              <div class="flavor plain"><b>Coke Zero</b></div>
+              <div class="flavor plain"><b>Diet Coke</b></div>
+              <div class="flavor plain"><b>Pepsi</b></div>
+              <div class="flavor plain"><b>Sprite</b></div>
+              <div class="flavor plain"><b>Canada Dry</b></div>
+            </div>
+          </div>
+
+          <div class="menu-cat">
+            <div class="menu-cat__head"><h3>Bottles &amp; Energy</h3><span class="line"></span></div>
+            <div class="menu-list">
+              <div class="menu-item"><div><span class="menu-item__name">Red Bull</span><div class="menu-item__desc">Original or Zero</div></div><div class="menu-item__price">$3.99</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Sparkling Water</span></div><div class="menu-item__price">$3.79</div></div>
+              <div class="menu-item"><div><span class="menu-item__name">Bottled Water</span></div><div class="menu-item__price">$1.99</div></div>
+            </div>
+          </div>
         </div>
 
         <!-- ========================= SWEETS ========================= -->
@@ -819,7 +966,7 @@
           </div>
         </div>
 
-        <p class="allergy-note">Hot drinks come in Md &amp; Lg only · Any drink offered in Sm is available iced · Please notify us of any allergies before ordering</p>
+        <p class="allergy-note">Hot drinks come in Md &amp; Lg only · Please notify us of any allergies before ordering</p>
       </div>
     </section>
 
