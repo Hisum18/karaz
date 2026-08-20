@@ -34,9 +34,8 @@ Matched to the venue's Google Business listing (verified July 2026):
 - **Address:** 6315 Leesburg Pike, Suite C, Falls Church, VA 22044
 - **Phone:** (703) 763-2100 (`tel:+17037632100`)
 - **Hours** (mirror Google exactly — visible table, footer, *and* JSON‑LD schema):
-  - Sun–Wed: 12:00 PM – 12:00 AM
-  - Thu: 12:00 PM – 1:00 AM
-  - Fri–Sat: 12:00 PM – 2:00 AM
+  - Sun–Thu: 12:00 PM – 2:00 AM
+  - Fri–Sat: 12:00 PM – 3:00 AM
 - **Map & directions** on `visit.html` use the official Google "Embed a map"
   iframe (`…/maps/embed?pb=…`) — a pin on the storefront; the stylesheet tints it
   to match the dark theme.
