@@ -2,7 +2,7 @@
 
 A multi‑page, static website for **Karaz Lounge** — a hookah lounge in Falls
 Church, VA. No build step, no dependencies — just open it or drop it on any web
-host. Live at **karazlounge.com** (hosted on Netlify, auto‑deploys from `main`).
+host. Live at **karazlounge.com** (hosted on Vercel, auto‑deploys from `main`).
 
 > "Hookah Lounge" is used only as a *descriptor* in page titles and headings —
 > never as the business name. The name is **Karaz Lounge** everywhere (logo,
@@ -28,8 +28,12 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
+A tracked `.claude/launch.json` is also included, so the in‑editor Claude Code
+preview server starts on the right port automatically. Local/secret Claude files
+(e.g. `.claude/settings.local.json`) stay git‑ignored.
+
 ## Real info that's already wired in
-Matched to the venue's Google Business listing (verified July 2026):
+Matched to the venue's Google Business listing (address & phone verified July 2026; hours updated August 2026):
 
 - **Address:** 6315 Leesburg Pike, Suite C, Falls Church, VA 22044
 - **Phone:** (703) 763-2100 (`tel:+17037632100`)
@@ -45,8 +49,11 @@ Matched to the venue's Google Business listing (verified July 2026):
   handle to enable.
 - **Reviews** on the home page are three real 5★ Google reviews; the "Read all
   reviews" button links to the Google listing.
-- **Menu** (`menu.html`) is in a tabbed layout. Hookah prices are confirmed;
-  other items/prices are kept in sync manually — re‑check against the live menu.
+- **Menu** (`menu.html`) is in a tabbed layout. Hookah brands & prices are
+  confirmed — Al Fakher, Fakher, Serbethi, Starbuzz, and Adalya (plus Refill);
+  two flavor spellings (`8ce Citrus Mango`, `Ming Tngs`) are pending owner
+  confirmation. Other items/prices are kept in sync manually — re‑check against
+  the live menu.
 
 ## SEO & structured data
 - **JSON‑LD** (`schema.org`) on every page: a `LocalBusiness`
