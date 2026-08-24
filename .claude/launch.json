@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "karaz-static",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-c", "import os,http.server,socketserver;socketserver.TCPServer(('',int(os.environ.get('PORT','5178'))),http.server.SimpleHTTPRequestHandler).serve_forever()"],
+      "port": 5178,
+      "autoPort": true
+    }
+  ]
+}
