@@ -50,10 +50,9 @@ Matched to the venue's Google Business listing (address & phone verified July 20
 - **Reviews** on the home page are three real 5★ Google reviews; the "Read all
   reviews" button links to the Google listing.
 - **Menu** (`menu.html`) is in a tabbed layout. Hookah brands & prices are
-  confirmed — Al Fakher, Fakher, Serbethi, Starbuzz, and Adalya (plus Refill);
-  two flavor spellings (`8ce Citrus Mango`, `Ming Tngs`) are pending owner
-  confirmation. Other items/prices are kept in sync manually — re‑check against
-  the live menu.
+  confirmed — Al Fakher, Fakher, Serbetli, Starbuzz, and Adalya (plus Refill);
+  one flavor spelling (`Ming Tngs`) is pending owner confirmation. Other
+  items/prices are kept in sync manually — re‑check against the live menu.
 
 ## SEO & structured data
 - **JSON‑LD** (`schema.org`) on every page: a `LocalBusiness`
