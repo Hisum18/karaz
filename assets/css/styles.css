@@ -499,6 +499,10 @@ html.no-js .menu-tabs-wrap { display: none; }
 .cta-band p { color: var(--muted); max-width: 50ch; margin: 0 auto 2rem; }
 .cta-band .hero__cta { justify-content: center; }
 
+/* Video feature (portrait clip) */
+.video-feature { display: flex; justify-content: center; }
+.video-feature__v { width: auto; max-width: 100%; max-height: 640px; border-radius: var(--radius); border: 1px solid var(--line-2); box-shadow: 0 30px 80px -40px rgba(0,0,0,.8); background: #000; display: block; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink-700); border-top: 1px solid var(--line); padding-block: clamp(3.5rem, 7vw, 5rem) 2rem; position: relative; z-index: 1; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: clamp(2rem,4vw,3rem); margin-bottom: 3rem; }
