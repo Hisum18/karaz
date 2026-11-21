@@ -227,11 +227,21 @@
         p.classList.toggle("is-active", p.id === "panel-" + id);
       });
     };
+    var tabsWrap = document.querySelector(".menu-tabs-wrap");
+    var keepPanelBelowTabs = function (id) {
+      var panel = document.getElementById("panel-" + id);
+      if (!panel || !tabsWrap) return;
+      var headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--header-h"), 10) || 76;
+      var stick = headerH + tabsWrap.offsetHeight + 16;
+      var top = panel.getBoundingClientRect().top;
+      if (top < stick) window.scrollTo({ top: window.scrollY + top - stick, behavior: "smooth" });
+    };
     menuTabs.addEventListener("click", function (e) {
       var b = e.target.closest('[role="tab"]');
       if (!b) return;
       var id = b.getAttribute("data-tab");
       activateTab(id, false);
+      keepPanelBelowTabs(id);
       if (history.replaceState) history.replaceState(null, "", "#" + id);
     });
     menuTabs.addEventListener("keydown", function (e) {
